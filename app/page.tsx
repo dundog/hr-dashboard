@@ -1,9 +1,11 @@
-"use client";
 
 import { motion } from "framer-motion";
+import { employees, leaveRequests } from "@/lib/data";
+
 
 export default function DashboardPage() {
   return (
+    
     <div className="min-h-screen bg-gradient-to-br from-gray-100 to-gray-200 p-8">
       <div className="max-w-7xl mx-auto space-y-10">
         

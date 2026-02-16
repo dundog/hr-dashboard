@@ -2,7 +2,7 @@
 import Link from "next/link";
 import { useState } from "react";
 import { Employee } from "@/types/employee";
-
+import { EmployeeTable } from "@/components/EmployeeTable";
 interface Props {
   data: Employee[];
 }

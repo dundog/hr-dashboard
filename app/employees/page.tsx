@@ -1,9 +1,8 @@
-import { EmployeeTable } from "../components/EmployeeTable";
-import { employees } from "@/lib/employees";
-
 export default function EmployeesPage() {
   return (
-    <main className="p-6 bg-gray-50 min-h-screen space-y-4">
+    <div className="space-y-6">
+      
+      {/* Header */}
       <div>
         <h1 className="text-2xl font-semibold">พนักงาน</h1>
         <p className="text-sm text-gray-500">
@@ -11,7 +10,13 @@ export default function EmployeesPage() {
         </p>
       </div>
 
-      <EmployeeTable data={employees} />
-    </main>
+      {/* Summary Cards */}
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+        {/* cards here */}
+      </div>
+
+      {/* Table */}
+      
+    </div>
   );
 }

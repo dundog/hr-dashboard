@@ -10,21 +10,35 @@ type Props = {
 
 export default function EmployeeTable({ employees }: Props) {
   return (
-    <table border={1} style={{ borderCollapse: "collapse" }}>
-      <thead>
-        <tr>
-          <th>Name</th>
-          <th>Department</th>
-        </tr>
-      </thead>
-      <tbody>
-        {employees.map((emp) => (
-          <tr key={emp.id}>
-            <td>{emp.name}</td>
-            <td>{emp.department}</td>
+    <div className="overflow-x-auto">
+      <table className="min-w-full border border-gray-200 rounded-lg overflow-hidden">
+        <thead className="bg-gray-100">
+          <tr>
+            <th className="text-left px-6 py-3 text-sm font-semibold text-gray-700">
+              Name
+            </th>
+            <th className="text-left px-6 py-3 text-sm font-semibold text-gray-700">
+              Department
+            </th>
           </tr>
-        ))}
-      </tbody>
-    </table>
+        </thead>
+
+        <tbody className="divide-y divide-gray-200">
+          {employees.map((emp) => (
+            <tr
+              key={emp.id}
+              className="hover:bg-gray-50 transition-colors"
+            >
+              <td className="px-6 py-4 text-sm text-gray-800">
+                {emp.name}
+              </td>
+              <td className="px-6 py-4 text-sm text-gray-600">
+                {emp.department}
+              </td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    </div>
   )
 }
